@@ -1,1 +1,1 @@
-module.exports = require('./lib/streetelement');
+export * from './lib/streetelement';
