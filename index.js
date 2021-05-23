@@ -1,1 +1,1 @@
-export * from './lib/streetelement';
+export * from './lib/streetelement.js';
