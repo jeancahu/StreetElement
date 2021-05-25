@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "prettier": "prettier lib/streetelement/* --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +23,8 @@
   "homepage": "https://github.com/jeancahu/StreetElement#readme",
   "dependencies": {
     "ol": "^6.5.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.0"
   }
 }
