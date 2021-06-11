@@ -1,7 +1,7 @@
 {
   "name": "streetelement",
-  "version": "0.5.1",
-  "description": "GTFS module to use with openlayer map [alpha]",
+  "version": "0.5.2",
+  "description": "GTFS module to use with Openlayers Map [alpha]",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -22,9 +22,13 @@
   },
   "homepage": "https://github.com/jeancahu/StreetElement#readme",
   "dependencies": {
-    "ol": "^6.5.0"
+    "ol": "^6.5.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
   },
   "devDependencies": {
+    "jest": "^27.0.4",
+    "npm-packlist": "^2.2.2",
     "prettier": "^2.3.0"
   }
 }
