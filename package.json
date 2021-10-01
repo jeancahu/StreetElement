@@ -1,6 +1,6 @@
 {
   "name": "streetelement",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "GTFS module to use with Openlayers Map [alpha]",
   "main": "index.js",
   "type": "module",
