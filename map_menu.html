@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Map Menu</title>
+        <style>
+         /* CSS Comment */
+         .se_map_menu {
+             position: static;
+             background-color: rgba(0,0,0,0.3);
+             padding: 10px 10px;
+             max-width: 230px;
+             /*min-height: 500px;*/
+             border-radius: 20px;
+         }
+
+         .se_map_menu select {
+             text-align: center;
+             min-width: 100%;
+         }
+
+         .se_map_menu .se_menu_box {
+             margin-top: 6px;
+             margin-bottom: 6px;
+             padding: 5px 5px;
+             border-radius: 8px;
+             border: 2px solid white;
+             display: grid;
+         }
+        </style>
+    </head>
+    <body>
+        <div class="se_map_menu">
+            <div class="se_menu_box">
+                <label for="map-interaction">Map interaction</label>
+                <select name="map-interaction">
+                    <option value="1">option 1</option>
+                    <option value="2">option 2</option>
+                    <option value="3">option 3</option>
+                    <option value="4">option 4</option>
+                </select>
+            </div>
+            <div class="se_menu_box">
+                <label for="map-node-type">Node type</label>
+                <select>
+                    <option value="1">option 1</option>
+                    <option value="2">option 2</option>
+                    <option value="3">option 3</option>
+                    <option value="4">option 4</option>
+                </select>
+            </div>
+
+            <div class="se_menu_box">
+                <button>Hide Nodes</button>
+                <button>Hide Links</button>
+                <button>Hide Stops</button>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <script>
+         // JS Comment
+        </script>
+    </footer>
+</html>
