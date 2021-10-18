@@ -36,7 +36,27 @@ The JavaScript code is the next. The main object is the streetElementGroup, you 
 import {streetElementGroup} from "streetelement";
 
 // Create a new StreetElementGroup
-let o_se_group = new streetElementGroup({center: [0.0,0.0]});
+let o_se_group = new streetElementGroup({
+  center: [-84.1027104, 9.865107],
+});
+
+// Add a single node
+o_se_group.addNode({
+  coordinate: [-84.1027104, 9.865107],
+  type: "endpoint",
+});
+
+// Add a second node (auto linked)
+o_se_group.addNode({
+  coordinate: [-84.1033104, 9.865107],
+  type: "waypoint",
+});
+
+// Add a third node (auto linked)
+o_se_group.addNode({
+  coordinate: [-84.1033104, 9.865607],
+  type: "stop",
+});
 
 // Set the element target
 o_se_group.setTarget(document.getElementById("map_container"));
@@ -46,7 +66,15 @@ export { o_se_group };
 In this _example.js_ we are exporting the object that means we can use the class methods from the browser console.
 
 The page will render the map (just like below) and you could interact with it to draw a shape or place stops, then you can download or manage the data through the class methods.
-![image](https://user-images.githubusercontent.com/18200186/137670912-fc8cdcd3-2896-4037-b1a7-254556f0d99d.png)
+
+
+![image](https://user-images.githubusercontent.com/18200186/137799972-0457c49b-afb2-4fb0-bb71-f45c13a61e88.png)
+
+
+You are able to add nodes and draw shapes manually throught the map or calling for streetElementGroup methods.
+Every node and link created has an unique ID, you can select the node or delete it by ID, to know a node ID you can select it manually on map, it will raise a pupup info with some values related to the node.
+
+Placing nodes with long distance in between will trigger a routing process to get the shorter path to link them, this router machine is a demo service then some times it could have a time to work, otherwise it is possible to draw using short distances, it will link directly with non-routed linear features.
 
 A little and broken (due github blocks external sources) concept example, use it in fullscreen mode.
 [Example](https://jeancahu.github.io/streetelement/#)
