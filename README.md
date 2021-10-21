@@ -67,9 +67,7 @@ In this _example.js_ we are exporting the object that means we can use the class
 
 The page will render the map (just like below) and you could interact with it to draw a shape or place stops, then you can download or manage the data through the class methods.
 
-
-![image](https://user-images.githubusercontent.com/18200186/137799972-0457c49b-afb2-4fb0-bb71-f45c13a61e88.png)
-
+![image](https://user-images.githubusercontent.com/18200186/138210135-751bb2ff-0f31-4271-a195-35214df7e4de.png)
 
 You are able to add nodes and draw shapes manually throught the map or calling for streetElementGroup methods.
 Every node and link created has an unique ID, you can select the node or delete it by ID, to know a node ID you can select it manually on map, it will raise a popup info with some values related to the node.
