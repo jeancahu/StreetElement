@@ -72,7 +72,7 @@ The page will render the map (just like below) and you could interact with it to
 
 
 You are able to add nodes and draw shapes manually throught the map or calling for streetElementGroup methods.
-Every node and link created has an unique ID, you can select the node or delete it by ID, to know a node ID you can select it manually on map, it will raise a pupup info with some values related to the node.
+Every node and link created has an unique ID, you can select the node or delete it by ID, to know a node ID you can select it manually on map, it will raise a popup info with some values related to the node.
 
 Placing nodes with long distance in between will trigger a routing process to get the shorter path to link them, this router machine is a demo service then some times it could have a time to work, otherwise it is possible to draw using short distances, it will link directly with non-routed linear features.
 

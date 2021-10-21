@@ -7,6 +7,7 @@
   "scripts": {
     "prettier": "prettier lib/streetelement/* --write",
     "debug": "webpack",
+    "watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
