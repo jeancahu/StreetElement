@@ -8,6 +8,7 @@
     "prettier": "prettier lib/streetelement/* --write",
     "debug": "webpack",
     "watch": "webpack --watch",
+    "doc": "jsdoc --configure jsdoc.config.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "jest": "^27.0.4",
+    "jsdoc": "^3.6.7",
     "npm-packlist": "^2.2.2",
     "prettier": "^2.3.0",
     "webpack": "^5.38.1",

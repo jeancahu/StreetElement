@@ -1,0 +1,31 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "recurseDepth": 2,
+    "sourceType": "module",
+    "source": {
+        "include": ["./lib/streetelement/"],
+        "exclude": ["./node_modules"],
+        "includePattern": ".+\\.js(doc|x)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": true,
+        "default": {
+            "outputSourceFiles": true
+        }
+    },
+    "opts": {
+        "template": "templates/default",
+        "encoding": "utf8",
+        "destination": "./docs/",
+        "recurse": true,
+        "readme": "./README.md",
+        "package": "./package.json"
+    }
+}
