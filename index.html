@@ -16,11 +16,18 @@
         <div class="main">
             <div id="map_container" class="map_container">
             </div>
+            <button onclick="downloadShapesTXT()">Console log / Alert: Shapes.txt</button>
         </div>
     </body>
     <footer>
-        <script src="./dist/main.bundle.js">
+        <script src="./dist/main.bundle.js"></script>
+        <script>
          // JS Comment
+         function downloadShapesTXT(){
+             console.log("Download shapes.txt");
+             console.log(global.SEGroup.shapesToGTFS());
+             alert(global.SEGroup.shapesToGTFS());
+         };
         </script>
     </footer>
 </html>
