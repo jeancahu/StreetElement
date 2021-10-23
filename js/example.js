@@ -49,9 +49,16 @@ let waypoints_list = [
 );
 
 // Add an endpoint
+// let end_node = SEGroup.addNode({
+//   // TODO
+//   coordinate: [-84.097001, 9.8661171],
+//   type: "endpoint",
+// });
+
+// Add an endpoint far away the other waypoints
 let end_node = SEGroup.addNode({
   // TODO
-  coordinate: [-84.097001, 9.8661171],
+  coordinate: [-84.094289, 9.8653635],
   type: "endpoint",
 });
 
@@ -80,6 +87,7 @@ shape.setVisible(true);
 
 function downloadShapesTXT() {
   console.log("Download shapes.txt");
+  shape.computeShape();
   console.log(SEGroup.shapesToGTFS());
   alert(SEGroup.shapesToGTFS());
 }
