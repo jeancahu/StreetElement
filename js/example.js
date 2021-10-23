@@ -26,12 +26,12 @@ let fork_node = SEGroup.addNode({
   type: "fork",
 });
 
-// SEGroup.addNode({
-//     coordinate: [-84.097665, 9.8653129],
-//     type: "endpoint",
-// });
+SEGroup.addNode({
+  coordinate: [-84.097665, 9.8653129],
+  type: "endpoint",
+});
 
-// SEGroup.selectNodeByID(fork_node.getID()); // FIXME
+SEGroup.selectNodeByID(fork_node.getID()); // FIXME
 
 // Add a set of nodes (auto linked)
 let waypoints_list = [
