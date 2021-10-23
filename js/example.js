@@ -6,17 +6,19 @@ let SEGroup = new streetElementGroup({
   center: [-84.097479, 9.865698],
 });
 
-SEGroup.getMap().getView().setZoom(17.6); // FIXME
+SEGroup.setZoom(17.6); // FIXME
 
 console.log("Set target");
 SEGroup.setTarget(document.getElementById("map_container"));
 
 // Add a single node
-let start_node_id = SEGroup.addNode({
+let start_node = SEGroup.addNode({
   // TODO
   coordinate: [-84.097973, 9.86529],
   type: "endpoint",
 });
+
+console.log(start_node);
 
 // Add a second node (auto linked)
 SEGroup.addNode({
@@ -25,13 +27,13 @@ SEGroup.addNode({
 });
 
 // Add a set of nodes (auto linked)
-[
+let waypoints_list = [
   [-84.097574, 9.8654472],
   [-84.097521, 9.865552],
   [-84.097479, 9.865698],
   [-84.097369, 9.8658552],
   [-84.097259, 9.8659487],
-].forEach((input_coor) =>
+].map((input_coor) =>
   SEGroup.addNode({
     coordinate: input_coor,
     type: "waypoint",
@@ -39,27 +41,39 @@ SEGroup.addNode({
 );
 
 // Add an endpoint
-let end_node_id = SEGroup.addNode({
+let end_node = SEGroup.addNode({
   // TODO
   coordinate: [-84.097001, 9.8661171],
   type: "endpoint",
 });
 
+console.log(end_node);
+
+SEGroup.unselectNode(); // FIXME
+
 // Create a Shape object inside the StreetElementGroup
-SEGroup.addShape({
+let shape = SEGroup.addShape({
   id: "new_shape",
-  start: 0, // start_node_id // TODO
-  end: 7, // end_node_id // TODO
+  start: start_node,
+  end: end_node,
+  //waypoints: waypoints_list
 });
 
-SEGroup.shapes.array[0].setVisible(true); // FIXME
+// Set the shape visible
+shape.setVisible(true);
 
 // Convert Shape data to GTFS format
 // display it in console
 (function () {
-    console.log(
-        SEGroup.shapesToGTFS() // FIXME
-    );
+  console.log(
+    SEGroup.shapesToGTFS() // FIXME
+  );
 })();
 
-export { SEGroup };
+function downloadShapesTXT() {
+  console.log("Download shapes.txt");
+  console.log(global.SEGroup.shapesToGTFS());
+  alert(global.SEGroup.shapesToGTFS());
+}
+
+export { SEGroup, downloadShapesTXT, shape };
