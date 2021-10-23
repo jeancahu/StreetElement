@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "prettier": "prettier lib/streetelement/* --write",
+    "prettier": "prettier js/* lib/streetelement/* --write",
     "debug": "webpack",
     "watch": "webpack --watch",
     "doc": "jsdoc --configure jsdoc.config.json",

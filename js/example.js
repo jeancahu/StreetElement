@@ -21,10 +21,17 @@ let start_node = SEGroup.addNode({
 console.log(start_node);
 
 // Add a second node (auto linked)
-SEGroup.addNode({
+let fork_node = SEGroup.addNode({
   coordinate: [-84.097719, 9.8653686],
-  type: "waypoint",
+  type: "fork",
 });
+
+// SEGroup.addNode({
+//     coordinate: [-84.097665, 9.8653129],
+//     type: "endpoint",
+// });
+
+// SEGroup.selectNodeByID(fork_node.getID()); // FIXME
 
 // Add a set of nodes (auto linked)
 let waypoints_list = [
@@ -56,7 +63,7 @@ let shape = SEGroup.addShape({
   id: "new_shape",
   start: start_node,
   end: end_node,
-  //waypoints: waypoints_list
+  waypoints: waypoints_list,
 });
 
 // Set the shape visible
@@ -72,8 +79,8 @@ shape.setVisible(true);
 
 function downloadShapesTXT() {
   console.log("Download shapes.txt");
-  console.log(global.SEGroup.shapesToGTFS());
-  alert(global.SEGroup.shapesToGTFS());
+  console.log(SEGroup.shapesToGTFS());
+  alert(SEGroup.shapesToGTFS());
 }
 
 export { SEGroup, downloadShapesTXT, shape };
