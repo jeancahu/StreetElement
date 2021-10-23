@@ -1,4 +1,10 @@
 dist/*
 jest*
 webpack*
-test/*
+test/
+bash/
+
+jsdoc.config.json
+index.html
+
+js/example.js
